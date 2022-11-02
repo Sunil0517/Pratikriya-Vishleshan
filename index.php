@@ -100,7 +100,7 @@
             <ul class="nav-menu mb-0 list-unstyled d-flex flex-md-row align-items-md-center">
 
               <!-- Log out-->
-              <li class="nav-item"><a class="nav-link text-white text-sm ps-0" href="login.php" onclick="<?php unset($role);session_unset();?>" > <span
+              <li class="nav-item"><a class="nav-link text-white text-sm ps-0" href="login.php" onclick="logout()" > <span
                     class="d-none d-sm-inline-block">Logout</span>
                   <svg class="svg-icon svg-icon-xs svg-icon-heavy">
                     <use xlink:href="#security-1"> </use>
@@ -194,7 +194,12 @@
     // pls don't forget to change to your domain :)
     injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
 
-
+      function logout() {
+        <?php 
+          unset($role);
+          session_unset();
+        ?>
+      }
   </script>
   <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
