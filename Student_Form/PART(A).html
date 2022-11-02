@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <title>students Feedback Form</title>
+
+    <style>
+        /* Styling the Body element i.e. Color,
+		Font, Alignment */
+        body {
+            background-color: #e9ecef;
+            font-family: Verdana;
+            text-align: center;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Inter", sans-serif;
+        }
+
+        /* Styling the Form (Color, Padding, Shadow) */
+        .form_questions {
+            /* background-color:#f8f9fa; */
+            max-width: 800px;
+            margin: 30px auto;
+            margin-bottom: 1px;
+            /* padding: 30px 25px; */
+            /* box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5); */
+        }
+
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+            background-color: #f8f9fa;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 3px 3px 32px -17px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Styling form-control Label */
+        .radio_ label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Styling form-control input,
+		select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border-radius: 2px;
+            font-family: inherit;
+            display: block;
+        }
+
+        /* Styling form-control Radio
+		button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        .radio_ {
+            padding: 15px;
+        }
+
+        .question {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .submit_button {
+            margin-top: 10px;
+            background-color: #52be73;
+            border: none;
+            color: white;
+            font-family: inherit;
+            font-size: 20px;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+            cursor: pointer;
+        }
+
+        .last_question {
+            margin-bottom: 5px;
+        }
+
+        .expression {
+            margin-bottom: 10px;
+            color: #f8d210;
+            text-shadow: 0px 0px 5px rgb(250, 222, 82, 0.81);
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 16px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: 0.2s;
+            transition: opacity 0.2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #52be73;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #52be73;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>STUDENT FEEDBACK FORM</h1>
+    <div>
+        <p id="date"></p>
+    </div>
+    <!-- Create Form -->
+    <form id="form" action="parents_insert.php" method="post">
+        <div class="form_questions">
+            <div class="form-control">
+                <label class="question">
+                    1. Is teacher always punctual in coming to your class?
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion1">Average</div>
+                    <label for="question_1"><input class="slider" type="range" id="question_1" name="question_1" min="1"
+                            max="5" onchange="feedbackValue(1,this.value)" /></label>
+                </div>
+            </div>
+            <div class="form-control">
+                <label class="question">
+                    2. Does the teacher come well prepared for lecture in your class?
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion2">Average</div>
+                    <label for="question_2"><input class="slider" type="range" id="question_2" name="question_2" min="1"
+                            max="5" onchange="feedbackValue(2,this.value)" /></label>
+                </div>
+            </div>
+            <div class="form-control">
+                <label class="question">
+                    3. Does the teacher make efforts in teaching and explanation?
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion3">Average</div>
+                    <label for="question_3"><input class="slider" type="range" id="question_3" name="question_3" min="1"
+                            max="5" onchange="feedbackValue(3,this.value)" /></label>
+                </div>
+            </div>
+            <div class="form-control">
+                <label class="question">
+                    4. Do you understand what the teacher is teaching?
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion4">Average</div>
+                    <label for="question_4"><input class="slider" type="range" id="question_4" name="question_4" min="1"
+                            max="5" onchange="feedbackValue(4,this.value)" /></label>
+                </div>
+            </div>
+            <div class="form-control">
+                <label class="question">
+                    5. Do you feel comfortable asking question to teacher?
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion5">Average</div>
+                    <label for="question_5"><input class="slider" type="range" id="question_5" name="question_5" min="1"
+                            max="5" onchange="feedbackValue(5,this.value)" /></label>
+                </div>
+            </div>
+            <div class="form-control">
+                <label class="question">
+                    6. Are the equipment in the lab enough in and working conditions
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion6">Average</div>
+                    <label for="question_6"><input class="slider" type="range" id="question_6" name="question_6" min="1"
+                            max="5" onchange="feedbackValue(6,this.value)" /></label>
+                </div>
+            </div>
+            <div class="form-control">
+                <label class="question">
+                    7. Is the Lab in charge explaining the experiment properly
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion7">Average</div>
+                    <label for="question_7"><input class="slider" type="range" id="question_7" name="question_7" min="1"
+                            max="5" onchange="feedbackValue(7,this.value)" /></label>
+                </div>
+            </div>
+            <div class="form-control last_question">
+                <label class="question">
+                    8.For the teacher's subject how much marks do you expect out of 100.
+                </label>
+                <div class="radio_">
+                    <div class="expression" id="feedbackQuestion8">50</div>
+                    <label for="question_8"><input class="slider" type="range" id="question_8" name="question_8" min="1"
+                            max="100" onchange="feedbackValueOutOf100(8,this.value)" /></label>
+                </div>
+            </div>
+        </div>
+        <button class="submit_button" type="submit" value="submit" onclick="redirect()">Submit</button>
+    </form>
+</body>
+<script>
+    let colorChoice = ["#e0301e", "#eb8c00", "#F8D210", "#5cf088", "#16e955"];
+    let shodowChoice = [
+        " 0px 0px 5px rgb(231, 91, 75,0.81)",
+        "0px 0px 5px rgb(255, 173, 51,0.81)",
+        "0px 0px 5px rgb(250, 222, 82,0.81)",
+        " 0px 0px 5px rgb(162, 246, 187,0.81)",
+        "0px 0px 5px rgb(92, 240, 136,0.81)",
+    ];
+    let textChoice = ["Poor", "Below Average", "Average", "Good", "Exellent"];
+    function feedbackValue(typeId, questionId) {
+        document.getElementById(`feedbackQuestion${typeId}`).innerHTML =
+            textChoice[questionId - 1];
+        document.getElementById(`feedbackQuestion${typeId}`).style.color =
+            colorChoice[questionId - 1];
+        document.getElementById(`feedbackQuestion${typeId}`).style.textShadow =
+            shodowChoice[questionId - 1];
+    }
+    function feedbackValueOutOf100(typeId, value) {
+        let modValue = value / 100;
+        if (modValue >= 0.01 && modValue <= 0.2) modValue = 1;
+        else if (modValue >= 0.21 && modValue <= 0.4) modValue = 2;
+        else if (modValue >= 0.41 && modValue <= 0.6) modValue = 3;
+        else if (modValue >= 0.61 && modValue <= 0.8) modValue = 4;
+        else modValue = 5;
+        document.getElementById(`feedbackQuestion${typeId}`).innerHTML = value;
+        document.getElementById(`feedbackQuestion${typeId}`).style.color =
+            colorChoice[modValue - 1];
+        document.getElementById(`feedbackQuestion${typeId}`).style.textShadow =
+            shodowChoice[modValue - 1];
+    }
+    function redirect() {
+        window.close;
+        window.opener.location.replace("http://127.0.0.1:5500/Student_dashboard.html");
+    }
+
+    n = new Date();
+    y = n.getFullYear();
+    m = n.getMonth() + 1;
+    d = n.getDate();
+    document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+</script>
+
+</html>

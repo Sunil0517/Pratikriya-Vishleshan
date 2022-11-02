@@ -1,0 +1,270 @@
+/*css of drag and drop box*/
+.flex-container {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 30p;
+  margin-right: 4%;
+  margin-left: 4%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item {
+   /*box-shadow: 4px 4px 4px 4px rgb(67, 11, 188); */
+  box-shadow: 0px 0px 16px -3px rgba(0,0,0,0.75);
+  background-color: #dee2e6;
+  color: black;
+  padding: 7px;
+  flex: 20%;
+  text-shadow: 1px 2px 3px whitesmoke;
+  flex-direction: column;
+  row-gap: 5%;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+/*add department details flex*/
+/* main content css */
+      .adddepartmentrow {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      /* Create four equal columns that sits next to each other */
+      .adddepartmentcolumn {
+        flex: 25%;
+
+        max-width: 25%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px #7beac9;
+      }
+      .dept_details {
+        background-color: #52be73;
+        height: 200px;
+        color: #fff;
+        box-shadow: 0px 0px 10px 0px #f9d78f;
+        border-radius: 5px;
+      }
+      #course_name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 10px 10px 5px 10px;
+      }
+      #dept_name_registered {
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 5px 8px;
+      }
+      #dept_name_details {
+        padding: 1px 8px;
+        font-size: 20px;
+      }
+      #program_name {
+        font-size: 2rem;
+        color: black;
+        font-weight: bold;
+        padding: 10px 24px;
+      }
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media (max-width: 1000px) {
+        .column {
+          flex: 33%;
+          max-width: 33%;
+        }
+      }
+      @media (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media (max-width: 500px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+/* Faculty Feedback form result */
+  h1 {
+        font-family: "Inter", sans-serif;
+      }
+      /* Styling the Form (Color, Padding, Shadow) */
+      .form_questions {
+        /* background-color:#f8f9fa; */
+        max-width: 800px;
+        margin: 30px auto;
+        margin-bottom: 1px;
+        /* padding: 30px 25px; */
+        /* box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5); */
+      }
+      /* Styling form-control Class */
+      .form-control {
+        text-align: left;
+        margin-bottom: 25px;
+        background-color: #f8f9fa;
+        /* padding: 30px 25px; */
+        border-radius: 8px;
+        box-shadow: 3px 3px 32px -17px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Styling form-control Label */
+      .radio_ label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      /* Styling form-control input,
+		select, textarea */
+      .form-control input,
+      .form-control select,
+      .form-control textarea {
+        border-radius: 2px;
+        font-family: inherit;
+        display: block;
+      }
+
+      /* Styling form-control Radio
+		button and Checkbox */
+      .form-control input[type="radio"],
+      .form-control input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+      }
+      .radio_ {
+        padding: 15px;
+      }
+      .question {
+        display: block;
+        margin-bottom: 15px;
+      }
+      .submit_button {
+        margin-top: 10px;
+        background-color: #52be73;
+        border: none;
+        color: white;
+        font-family: inherit;
+        font-size: 20px;
+        padding: 15px 25px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+      }
+      .last_question {
+        margin-bottom: 5px;
+      }
+      .expression {
+        margin-bottom: 10px;
+        color: #f8d210;
+        text-shadow: 0px 0px 5px rgb(250, 222, 82, 0.81);
+      }
+      .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 16px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+      }
+      .slider:hover {
+        opacity: 1;
+      }
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #52be73;
+        cursor: pointer;
+      }
+      .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #52be73;
+        cursor: pointer;
+      }
+
+      /* Student Dashboard */
+      .student_feedback_row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      /* Create four equal student_feedback_columns that sits next to each other */
+      .student_feedback_column {
+        flex: 25%;
+
+        max-width: 25%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px lightblue;
+      }
+      .feedback_subject_details {
+       background-color:#17a2bb;
+        height: 200px;
+        color: #ffff;
+        box-shadow: 0px 0px 10px 0px lightblue;
+        border-radius: 5px;
+      }
+      .feedback_teacher_name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 10px 10px 5px 10px;
+      }
+      .feedback_subject_name {
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 5px 8px;
+      }
+      /* Responsive layout - makes a two student_feedback_column-layout instead of four student_feedback_columns */
+      @media (max-width: 1000px) {
+        .student_feedback_column {
+          flex: 33%;
+          max-width: 33%;
+        }
+      }
+      @media (max-width: 800px) {
+        .student_feedback_column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Responsive layout - makes the two student_feedback_columns stack on top of each other instead of next to each other */
+      @media (max-width: 500px) {
+        .student_feedback_column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+
+      /*Student dashboard part B  */
+      .partB {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+      .student_feedback_columnB {
+        flex: 25%;
+
+        max-width: 25%;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px lightseagreen;
+      }
+      .feedback_subject_detailsB{
+        background-color:#17a2bb;
+        height: 200px;
+        color: #fff;
+        box-shadow: 0px 0px 10px 0px lightblue;
+        border-radius: 5px;
+      }
+      .hide-result{
+         display: none;
+      } 
