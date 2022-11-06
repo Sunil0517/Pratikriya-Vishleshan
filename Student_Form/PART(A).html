@@ -131,6 +131,11 @@
         background: #52be73;
         cursor: pointer;
       }
+      #teacherOptions {
+        width: 50%;
+        margin: auto;
+        padding: 10px 20px 10px 10px;
+      }
     </style>
   </head>
 
@@ -142,10 +147,12 @@
     <!-- Create Form -->
     <form id="form" action="parents_insert.php" method="post">
       <div class="form_questions">
-        <label for="teacherName">Teacher Name</label>
-        <select name="teacherName" id="teacherOptions">
-          <!-- <option value="one">One</option> -->
-        </select>
+        <div class="form-control">
+          <label for="teacherName"></label>
+          <select name="teacherName" id="teacherOptions">
+            <!-- <option value="one">One</option> -->
+          </select>
+        </div>
         <div class="form-control">
           <label class="question">
             1. Is teacher always punctual in coming to your class?
@@ -348,7 +355,7 @@
         "http://127.0.0.1:5500/Student_dashboard.html"
       );
     }
-    let tempstring = "";
+    let tempstring = `<option value="" disabled selected hidden>Select Teacher Name</option>`;
     for (let i = 0; i < teacherName.length; i++) {
       tempstring += `<option value="${teacherID[i]}">${teacherName[i]}</option>`;
     }
